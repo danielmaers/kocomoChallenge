@@ -23,7 +23,7 @@ Letters:
 
 Answer: 5
 
-#Explanation:
+# Explanation:
 * 5 is the length of 'hello', logest one that can be written
 * 'kellogg' (7) needs two 'g', and there's only one in the letters bag
 * 'kocomo' (6) needs a 'c' that is not present in the letters bag
