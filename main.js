@@ -59,24 +59,7 @@ Bonus:
 1. What's the Time complexity?
 2. What's the Space complexity?
 
-*/
-
-//recorrer el arreglo de palabras
-//por cada palabra, recorrer el arreglo de letras
-//si la palabra contiene una letra que no esta en el arreglo de letras,
-//se elimina de la palabra
-//si la palabra contiene todas las letras del arreglo de letras,
-//se determina su length y se guarda en una variable
-//se compara el length de la palabra con el length de la palabra mas larga
-//si la palabra es mas larga, se guarda en la variable
-//se retorna el length de la palabra mas larga posible
-
-// let palabras=['kellogg', 'go', 'hola', 'lego', 'hug', 'kocomo', 'hello'];
- //                   i
-// let letras=['a','l','l', 'e', 'g', 'k', 'o', "g"];
-//                                               j
-//word=''
-//      
+*/   
 
 function wordsAndLetters(words, letters){
    let longestWord = 0;
@@ -92,7 +75,7 @@ function wordsAndLetters(words, letters){
            longestWord = words[i].length;
        }
     }
-    console.log(longestWord);
+    
     return longestWord;
 }
 
@@ -100,3 +83,7 @@ let palabras=['kellogg', 'go', 'hola', 'lego', 'hug', 'kocomo', 'hello'];
 let letras=['a','l','l', 'e', 'g', 'k', 'o', "g"];
 
 wordsAndLetters(palabras, letras);
+
+
+//1.  Time complexity O(n*m^2) being n=words length in for loop, m=word length in for loop and another one at includes method
+//2.  Space complexity O(n) being n the space occupied by word
