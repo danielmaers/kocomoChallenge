@@ -10,9 +10,9 @@ once.
 e.g. 
 Words:
 ------------------------------
-| 'kellogg' 'go'       |
-|'hola' 'lego' 'hug'|
-| 'kocomo' 'hello' |
+<p>| 'kellogg' 'go'       |</p>
+<p>|'hola' 'lego' 'hug'|</p>
+<p>| 'kocomo' 'hello' |</p>
 ------------------------------
 
 Letters:
