@@ -64,26 +64,32 @@ Bonus:
 function wordsAndLetters(words, letters){
    let longestWord = 0;
    for(let i=0; i<words.length; i++){
-       let word = words[i];       
-       for(let j=0; j<word.length; j++){
-           if(word.includes(letters[j])){
-               word = word.replace(letters[j],'');
+       let word = words[i];     
+       
+    let newLetters =[...letters];
+       for(let j=0; j<newLetters.length; j++){
+           
+           if(word.includes(newLetters[j])){
+
+               word = word.replace(newLetters[j],'');
+               newLetters.splice(j,1);
+               j=j-1;
            }
           
        }
-       if(words[i].length > longestWord ){
+
+       if(words[i].length > longestWord && word.length === 0){
            longestWord = words[i].length;
        }
     }
-    
+    console.log(longestWord);
     return longestWord;
 }
 
-let palabras=['kellogg', 'go', 'hola', 'lego', 'hug', 'kocomo', 'hello'];
-let letras=['a','l','l', 'e', 'g', 'k', 'o', "g"];
+let palabras=['kellogger', 'go', 'hola', 'lego', 'hug', 'kocomo', 'hello', "kellogg"];
+let letras=['a','l','l', 'e', 'g', 'k', 'o', "g", "e", "r"];
 
 wordsAndLetters(palabras, letras);
 
-
 //1.  Time complexity O(n*m^2) being n=words length in for loop, m=word length in for loop and another one at includes method
-//2.  Space complexity O(n) being n the space occupied by word
+//2.  Space complexity O(n+m) being n the space occupied by word and m the space occupied by letters
